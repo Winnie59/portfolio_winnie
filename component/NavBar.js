@@ -15,11 +15,21 @@ const NavBar = ({sideOpen, setSideOpen}) => {
         </div>
         <div className={styles.item}>
             <ul className={styles.list}>
-                <li className={styles.listItem}>PROJECTS</li>
-                <li className={styles.listItem}>SKILLS</li>
-                <li className={styles.listItem}>RESUME</li>
-                <li className={styles.listItem}>ABOUT</li>
-                <li className={styles.listItem}>CONTACT</li>
+                <Link href='/#projects' passHref >
+                    <li className={styles.listItem}>PROJECTS</li>
+                </Link>
+                <Link href='/#skills' passHref>
+                    <li className={styles.listItem}>SKILLS</li>
+                </Link>
+                <Link href='/#resume' passHref>
+                    <li className={styles.listItem}>RESUME</li>
+                </Link>
+                <Link href='/#about' passHref>
+                    <li className={styles.listItem}>ABOUT</li>
+                </Link>
+                <Link href='/#contact' passHref>
+                    <li className={styles.listItem}>CONTACT</li>
+                </Link>
             </ul>
             <div className={styles.hamburger} onClick={()=>setSideOpen(!sideOpen)}>
                 <span className={styles.line1}></span>

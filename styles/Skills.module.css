@@ -13,7 +13,7 @@
 .wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .sub {
@@ -38,7 +38,6 @@
 }
 
 .item:first-child:hover {
-    border: 1px solid #f3f0f050;
     background-color: #f3f0f090;
 }
 
@@ -48,7 +47,6 @@
 }
 
 .item:nth-child(2):hover {
-    border: 1px solid #f3f0f050;
     background-color: #f3f0f090;
 }
 
@@ -58,7 +56,6 @@
 }
 
 .item:last-child:hover {
-    border: 1px solid #f3f0f050;
     background-color: #f3f0f090;
 }
 
@@ -77,7 +74,7 @@
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:820px) {
     .wrapper {
         display: block;
         height: auto;
@@ -90,6 +87,11 @@
 
     .container {
         height: auto;
+    }
+
+    .title {
+        font-size: 45px;
+        text-align: center;
     }
 
 }

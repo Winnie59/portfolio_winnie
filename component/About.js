@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <div className={styles.item}>
         <h1 className={styles.title}>ABOUT ME</h1> 
-        <p className={styles.desc}>Hello! I’m Winnie Bolm. I’m a software engineer who had background in manufacturing and hospitality industry. In September 2021, I finally found my passion. I have learned that nothing is easy at first but just keep going. I enjoy creating and developing user-friendly interface. I would love to work and connect with you. </p> 
+        <p className={styles.desc}>Hello! I’m Winnie Bolm. I’m a software engineer who had background in manufacturing and hospitality industry. In September 2021, I found my passion in computer software programming. I have learned that nothing is easy at first but just keep going. I enjoy creating and developing user-friendly interface. I would love to work and connect with you. </p> 
         <button className={styles.button}>Download Resume</button>
       </div>
     </div>

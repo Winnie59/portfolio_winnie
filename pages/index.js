@@ -8,8 +8,11 @@ import Projects from '../component/Projects'
 import SideBar from '../component/SideBar'
 import Skills from '../component/Skills'
 import styles from '../styles/Home.module.css'
+import { data } from "../data";
+import About from '../component/About'
 
-export default function Home() {
+export default function Home({projects}) {
+  console.log(projects)
   const [sideOpen, setSideOpen] = useState(false)
   return (
     <div className={styles.container}>
@@ -21,9 +24,17 @@ export default function Home() {
       <NavBar sideOpen={sideOpen} setSideOpen={setSideOpen} />
       <SideBar sideOpen={sideOpen} setSideOpen={setSideOpen}/>
       <Logo />
-      <Projects />
+      <About />
+      <Projects projects={projects} />
       <Skills />
       <Contact />
     </div>
   )
 }
+
+export const getStaticProps = () => {
+  const projects = data;
+  return {
+    props: { projects },
+  };
+};

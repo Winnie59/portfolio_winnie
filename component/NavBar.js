@@ -15,6 +15,9 @@ const NavBar = ({sideOpen, setSideOpen}) => {
         </div>
         <div className={styles.item}>
             <ul className={styles.list}>
+                <Link href='/#about' passHref>
+                    <li className={styles.listItem}>ABOUT</li>
+                </Link>
                 <Link href='/#projects' passHref >
                     <li className={styles.listItem}>PROJECTS</li>
                 </Link>
@@ -23,9 +26,6 @@ const NavBar = ({sideOpen, setSideOpen}) => {
                 </Link>
                 <Link href='/#resume' passHref>
                     <li className={styles.listItem}>RESUME</li>
-                </Link>
-                <Link href='/#about' passHref>
-                    <li className={styles.listItem}>ABOUT</li>
                 </Link>
                 <Link href='/#contact' passHref>
                     <li className={styles.listItem}>CONTACT</li>

@@ -1,10 +1,38 @@
+import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Projects.module.css'
+import Image from 'next/image'
 
-const Projects = () => {
+const Projects = ({projects}) => {
   return (
     <div className={styles.container} id='projects'>
-        Projects
+       <h1 className={styles.title}>PROJECTS</h1>
+       <div className={styles.projects}>
+          {projects.map((project) => (
+            <Link key={project.id} href={`/project/${project.id}`} passHref>
+              <div className={styles.project}>
+                <span className={styles.cat}>{project.title}</span>
+                <div className={styles.media}>
+                  {project.video ? (
+                    <video 
+                    className={styles.video}
+                    src={`/img/${project.video}`}
+                    autoPlay
+                    loop />
+                  ) : (
+                    <Image src={`/img/${project.photo}`} 
+                    width="100%"
+                    height="100%"
+                    layout="responsive"
+                    objectFit="cover"
+                    alt=""
+                    />
+                  )}
+                </div>
+              </div>
+            </Link>
+          ))}
+       </div>
     </div>
   )
 }

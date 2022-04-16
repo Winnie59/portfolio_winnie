@@ -24,8 +24,10 @@ const NavBar = ({sideOpen, setSideOpen}) => {
                 <Link href='/#skills' passHref>
                     <li className={styles.listItem}>SKILLS</li>
                 </Link>
-                <Link href='/#resume' passHref>
+                <Link href='/img/Winnie Bolm Resume.pdf' >
+                <a target="_blank">
                     <li className={styles.listItem}>RESUME</li>
+                </a>
                 </Link>
                 <Link href='/#contact' passHref>
                     <li className={styles.listItem}>CONTACT</li>

@@ -1,16 +1,30 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import styles from '../styles/Contact.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [message, setMessage] = useState(false)
+  const formRef = useRef()
+  const [done, setDone] = useState(false)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setMessage(true)
+    emailjs.sendForm(
+      `${process.env.NEXT_PUBLIC_YOUR_SERVICE_ID}`, 
+      `${process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID}`, 
+      formRef.current, 
+      `${process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY}`
+      )
+    .then((result) => {
+        console.log(result.text);
+        setDone(true)
+    }, (error) => {
+        console.log(error.text);
+    });
   }
+
   return (
     <div className={styles.container} id='contact'>
         <div className={styles.item}>
@@ -36,12 +50,12 @@ const Contact = () => {
         </div>
         <div className={styles.item}>
            <h3 className={styles.sub}>Contact and Feedback</h3>
-          <form className={styles.form} onSubmit={handleSubmit}>
-          <input className={styles.input} type="text" placeholder='Name' />
-            <input className={styles.input} type="text" placeholder='Email' />
-            <textarea className={styles.textarea} placeholder='Message'></textarea>
+          <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
+          <input className={styles.input} type="text" placeholder='Name' name="user_name" />
+            <input className={styles.input} type="text" placeholder='Email' name="user_email" />
+            <textarea className={styles.textarea} placeholder='Message' name="message" ></textarea>
+            {done && <span>Thanks for the message!!</span> }
             <button className={styles.button}>SEND</button>
-            {message && <span>Thanks for the message!!</span> }
           </form>
         </div>
     </div>

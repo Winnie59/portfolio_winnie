@@ -12,7 +12,6 @@ import { data } from "../data";
 import About from '../component/About'
 
 export default function Home({projects}) {
-  console.log(projects)
   const [sideOpen, setSideOpen] = useState(false)
   return (
     <div className={styles.container}>

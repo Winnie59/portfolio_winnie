@@ -13,13 +13,6 @@ const Projects = ({projects}) => {
               <div className={styles.project}>
                 <span className={styles.cat}>{project.title}</span>
                 <div className={styles.media}>
-                  {project.video ? (
-                    <video 
-                    className={styles.video}
-                    src={`/img/${project.video}`}
-                    autoPlay
-                    loop />
-                  ) : (
                     <Image src={`/img/${project.photo}`} 
                     width="100%"
                     height="100%"
@@ -27,7 +20,6 @@ const Projects = ({projects}) => {
                     objectFit="cover"
                     alt=""
                     />
-                  )}
                 </div>
               </div>
             </Link>

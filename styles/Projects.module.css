@@ -63,7 +63,7 @@
     object-fit: cover;
 }
   
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 820px) {
     .container {
         padding: 20px;
     }
@@ -80,5 +80,6 @@
     .title {
         font-size: 45px;
         text-align: center;
+        margin-top: 55px;
     }
 }

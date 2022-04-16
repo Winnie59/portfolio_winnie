@@ -29,7 +29,17 @@ const Contact = () => {
     <div className={styles.container} id='contact'>
         <div className={styles.item}>
          <h1 className={styles.title}>CONTACT</h1> 
-         <span className={styles.text}>" Would love to hear your feedback and Let's connect "</span>
+         <div className={styles.card}>
+         <p className={styles.text}> would love to hear your feedback ...</p>
+         </div>
+         <div className={styles.connect}>
+          <span className={`${styles.textSub} ${styles.nect}`}>LET'S CONNECT</span> 
+          <div className={styles.mail}>
+            <Image src='/img/email.png' width={80} height={80} objectFit='contain'/>
+            <span className={`${styles.textSub} ${styles.email}`}>winnie.bolm@gmail.com</span>   
+          </div>
+           
+         </div>
          <div className={styles.social}>
           <Link href='https://www.linkedin.com/in/winniebolm/' >
           <a target="_blank">
@@ -49,7 +59,7 @@ const Contact = () => {
          </div>
         </div>
         <div className={styles.item}>
-           <h3 className={styles.sub}>Contact and Feedback</h3>
+           <h3 className={styles.sub}>Contact or Feedback</h3>
           <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
           <input className={styles.input} type="text" placeholder='Name' name="user_name" />
             <input className={styles.input} type="text" placeholder='Email' name="user_email" />

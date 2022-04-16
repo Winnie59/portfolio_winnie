@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const About = () => {
   return (
-    <div className={styles.container} id='about'>
+    <section className={styles.container} id='about'>
        <div className={styles.item}>
         <div className={styles.wrapper}>
           <Image src='/img/about.png' width='100%' height='100%' layout='responsive' objectFit='contain' />
@@ -20,7 +20,7 @@ const About = () => {
         </a>
         </Link>
       </div>
-    </div>
+    </section>
   )
 }
 

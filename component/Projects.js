@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Projects = ({projects}) => {
   return (
-    <div className={styles.container} id='projects'>
+    <section className={styles.container} id='projects'>
        <h1 className={styles.title}>PROJECTS</h1>
        <div className={styles.projects}>
           {projects.map((project) => (
@@ -25,7 +25,7 @@ const Projects = ({projects}) => {
             </Link>
           ))}
        </div>
-    </div>
+    </section>
   )
 }
 

@@ -26,7 +26,7 @@ const Contact = () => {
   }
 
   return (
-    <div className={styles.container} id='contact'>
+    <footer className={styles.container} id='contact'>
         <div className={styles.item}>
          <h1 className={styles.title}>CONTACT</h1> 
          <div className={styles.card}>
@@ -68,7 +68,7 @@ const Contact = () => {
             <button className={styles.button}>SEND</button>
           </form>
         </div>
-    </div>
+    </footer>
   )
 }
 

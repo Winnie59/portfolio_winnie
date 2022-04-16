@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const NavBar = ({sideOpen, setSideOpen}) => {
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
         <div className={styles.item}>
             <div className={styles.logo}>
                 <Link href='/' passHref>
@@ -39,7 +39,7 @@ const NavBar = ({sideOpen, setSideOpen}) => {
                 <span className={styles.line3}></span>
             </div>
         </div>
-    </div>
+    </nav>
   )
 }
 

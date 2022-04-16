@@ -19,11 +19,16 @@ const Contact = () => {
       )
     .then((result) => {
         console.log(result.text);
+        formRef.current.reset()
         setDone(true)
     }, (error) => {
         console.log(error.text);
     });
   }
+
+  setTimeout(() => {
+    setDone(false)
+  },5000)
 
   return (
     <footer className={styles.container} id='contact'>

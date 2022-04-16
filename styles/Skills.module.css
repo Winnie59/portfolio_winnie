@@ -1,7 +1,7 @@
 .container {
     height: calc(100vh - 95px);
     padding: 22px 25px;
-    margin: 8% 10%;
+    margin: 50px 75px;
 }
 
 .title {
@@ -61,15 +61,19 @@
 
 .ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0;
 }
 
 .li {
     font-size: 1.2rem;
 	line-height: 1rem;
 	margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
 }
 
 

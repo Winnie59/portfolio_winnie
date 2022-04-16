@@ -9,7 +9,7 @@ const Skills = () => {
       <div className={styles.wrapper}>
         <div className={styles.item}>
           <Image src='/img/pro.png' width='100%' height='100%'  objectFit='contain' />
-          <h3 className={styles.sub}>Programming Languages</h3>
+          <h3 className={styles.sub}>Programming</h3>
           <ul className={styles.ul}>
             <li className={styles.li}>JavaScript</li>
             <li className={styles.li}>Python</li>
@@ -20,7 +20,7 @@ const Skills = () => {
         </div>
         <div className={styles.item}>
         <Image src='/img/frame.png' width='100%' height='100%'  objectFit='contain' />
-          <h3 className={styles.sub}>Frameworks</h3>
+          <h3 className={styles.sub}>Frameworks / Libraries</h3>
           <ul className={styles.ul}>
             <li className={styles.li}>Node.js</li>
             <li className={styles.li}>Express</li>
@@ -31,7 +31,7 @@ const Skills = () => {
         </div>
         <div className={styles.item}>
         <Image src='/img/tool.png' width='100%' height='100%'  objectFit='contain' />
-          <h3 className={styles.sub}>Databases and Tools</h3>
+          <h3 className={styles.sub}>Databases / Tools</h3>
           <ul className={styles.ul}>
             <li className={styles.li}>MongoDB</li>
             <li className={styles.li}>SQL</li>

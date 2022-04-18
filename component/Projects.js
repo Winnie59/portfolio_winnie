@@ -10,6 +10,7 @@ const Projects = ({projects}) => {
        <div className={styles.projects}>
           {projects.map((project) => (
             <Link key={project.id} href={`/project/${project.id}`} passHref>
+              <a target="_blank">
               <div className={styles.project}>
                 <span className={styles.cat}>{project.title}</span>
                 <div className={styles.media}>
@@ -22,6 +23,7 @@ const Projects = ({projects}) => {
                     />
                 </div>
               </div>
+              </a>
             </Link>
           ))}
        </div>

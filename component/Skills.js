@@ -9,7 +9,7 @@ const Skills = () => {
       <div className={styles.wrapper}>
         <div className={styles.item}>
           <Image src='/img/pro.png' width='100%' height='100%'  objectFit='contain' />
-          <h3 className={styles.sub}>Programming</h3>
+          <h3 className={styles.sub}>Programming languages / Others</h3>
           <ul className={styles.ul}>
             <li className={styles.li}>JavaScript</li>
             <li className={styles.li}>Python</li>

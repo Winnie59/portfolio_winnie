@@ -19,11 +19,12 @@ const Project = ({project}) => {
                 <div className={styles.media}>
                 <Link href={project.link} >
                 <a target="_blank">
+                  { project.video && 
                     <video 
                     className={styles.video}
                     src={`/img/${project.video}`}
                     autoPlay
-                    loop />  
+                    loop />  }
                 </a>
                 </Link>
                 </div>

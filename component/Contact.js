@@ -62,6 +62,14 @@ const Contact = () => {
           </a>
           </Link>
          </div>
+         <div className={styles.create}>
+           <span>Created by </span>
+           <Link href='https://www.winniebolm.com/'>
+           <a target="_blank">
+           <Image src='/img/logo.png' width={30} height={30} />
+           </a>
+           </Link>
+         </div>
         </div>
         <div className={styles.item}>
            <h3 className={styles.sub}>Contact or Feedback</h3>
